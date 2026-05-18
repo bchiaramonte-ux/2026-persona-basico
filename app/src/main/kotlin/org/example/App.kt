@@ -2,10 +2,12 @@
 package org.example
 
 
-class Persona(val nombre: String, val apellido: String, val edad: Int) {
-    
+class Persona(private var nombre: String, private var apellido: String, private var edad: Int) {
+    override fun toString(): String { 
+        return "Persona( nombre=${nombre}, apellido=${apellido}, edad=${edad})" 
+    } 
 }
-fun main{
+fun main(){
     val pers=Persona("Bautista", "Chiaramonte", 16) 
     println(pers)
 }
